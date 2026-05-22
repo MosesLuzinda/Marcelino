@@ -1,5 +1,5 @@
 {
   "installCommand": "cd ../.. && corepack enable && corepack prepare pnpm@9.15.0 --activate && pnpm install",
-  "buildCommand": "cd ../.. && pnpm run db:generate && pnpm --filter @marcelino/web run build",
+  "buildCommand": "pnpm -w run db:generate && pnpm --filter @marcelino/web run build",
   "framework": "nextjs"
 }
