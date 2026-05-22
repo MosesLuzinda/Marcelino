@@ -1,0 +1,4 @@
+{
+  "installCommand": "cd ../.. && corepack enable && pnpm install",
+  "buildCommand": "cd ../.. && pnpm --filter @marcelino/database generate && pnpm --filter @marcelino/web build"
+}

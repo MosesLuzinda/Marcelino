@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: marcelino-api
+    runtime: node
+    plan: free
+    rootDir: .
+    buildCommand: pnpm install && pnpm db:generate && pnpm --filter @marcelino/api build
+    startCommand: cd apps/api && node dist/index.js
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: marcelino-db
+          property: connectionString
+      - key: JWT_ACCESS_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: BOOTSTRAP_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false
+
+databases:
+  - name: marcelino-db
+    plan: free
+    databaseName: marcelino_school
+    user: marcelino

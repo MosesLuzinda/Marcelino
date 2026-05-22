@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 250 252;
+    --foreground: 15 23 42;
+    --card: 255 255 255;
+    --border: 226 232 240;
+    --luxury-deep: 10 15 28;
+    --luxury-gold: 201 162 39;
+    --luxury-teal: 20 184 166;
+  }
+  .dark {
+    --background: 10 15 28;
+    --foreground: 248 250 252;
+    --card: 30 41 59;
+    --border: 51 65 85;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-luxury-deep dark:text-slate-100 antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-2xl border border-white/20 dark:border-white/10 shadow-2xl shadow-black/5;
+  }
+  .glass-dark {
+    @apply bg-slate-900/40 backdrop-blur-2xl border border-white/10 shadow-2xl;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-600 via-accent-teal to-brand-500 px-8 py-3.5 font-semibold text-white shadow-lg shadow-accent-teal/30 transition hover:shadow-xl hover:shadow-accent-teal/40 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-brand-600 px-8 py-3.5 font-semibold text-brand-600 transition hover:bg-brand-50 dark:text-brand-300 dark:border-brand-400 dark:hover:bg-white/5;
+  }
+  .card {
+    @apply rounded-2xl bg-white p-6 shadow-sm border border-slate-100 dark:bg-slate-800/40 dark:border-white/10;
+  }
+  .card-luxury {
+    @apply rounded-3xl bg-white/80 dark:bg-slate-900/50 p-8 border border-slate-200/80 dark:border-white/10 shadow-xl backdrop-blur-sm transition duration-500 hover:border-accent-teal/30 hover:shadow-2xl hover:shadow-accent-teal/10;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-5xl font-bold tracking-tight text-brand-950 dark:text-white;
+  }
+  .text-shimmer {
+    @apply bg-gradient-to-r from-accent-gold via-amber-200 to-accent-gold bg-[length:200%_auto] bg-clip-text text-transparent animate-shimmer;
+  }
+  .grain {
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+  .mesh-hero {
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 30%, rgba(20, 184, 166, 0.35), transparent),
+      radial-gradient(ellipse 70% 50% at 80% 70%, rgba(212, 175, 55, 0.2), transparent),
+      linear-gradient(160deg, #0a0f1c 0%, #0c4a6e 45%, #0f172a 100%);
+  }
+}

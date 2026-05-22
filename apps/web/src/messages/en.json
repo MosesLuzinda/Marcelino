@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "login": "Login"
+  },
+  "common": {
+    "welcome": "Welcome",
+    "logout": "Logout"
+  }
+}

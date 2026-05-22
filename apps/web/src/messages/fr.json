@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "login": "Connexion"
+  },
+  "common": {
+    "welcome": "Bienvenue",
+    "logout": "Déconnexion"
+  }
+}

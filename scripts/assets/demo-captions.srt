@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:05,000
+Welcome to Marcelino International Academy
+
+2
+00:00:05,000 --> 00:00:12,000
+Explore our modern public website and portals
+
+3
+00:00:12,000 --> 00:00:20,000
+Student, Teacher, Parent, and Admin dashboards
+
+4
+00:00:20,000 --> 00:00:28,000
+Secure fee payments via Flutterwave and Mobile Money
+
+5
+00:00:28,000 --> 00:00:35,000
+Fully responsive on desktop and mobile
