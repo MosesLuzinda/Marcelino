@@ -13,7 +13,8 @@
     "db:studio": "pnpm --filter @marcelino/database studio",
     "demo:record": "pnpm --filter @marcelino/web demo:record",
     "demo:screenshots": "pnpm --filter @marcelino/web demo:screenshots",
-    "test": "turbo test"
+    "test": "turbo test",
+    "vercel-build": "pnpm run db:generate && pnpm --filter @marcelino/web run build"
   },
   "devDependencies": {
     "prisma": "^6.19.3",

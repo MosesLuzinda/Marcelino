@@ -1,4 +1,5 @@
 {
-  "installCommand": "cd ../.. && corepack enable && pnpm install",
-  "buildCommand": "cd ../.. && pnpm --filter @marcelino/database generate && pnpm --filter @marcelino/web build"
+  "installCommand": "cd ../.. && corepack enable && corepack prepare pnpm@9.15.0 --activate && pnpm install --frozen-lockfile",
+  "buildCommand": "cd ../.. && pnpm run db:generate && pnpm --filter @marcelino/web run build",
+  "framework": "nextjs"
 }
